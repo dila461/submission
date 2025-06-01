@@ -23,22 +23,22 @@
         <a href="#" class="nav-logo">
           <h2 class="logo-text">Spot<span>Cafe.</span></h2>
         </a>
+        <button id="menu-open-button" class="fas fa-bars"></button>
         <ul class="nav-menu">
-          <button id="menu-close-button" class="fas fa-times"></button>
           <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
+            <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
+            <a href="#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Category</a>
+            <a href="#category" class="nav-link">Category</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Review</a>
+            <a href="#review" class="nav-link">Review</a>
           </li>
         </ul>
-        <button id="menu-open-button" class="fas fa-bars"></button>
+        <button id="menu-close-button" class="fas fa-times"></button>
       </nav>
     </header>
     <!-- Header / Navbar End-->
@@ -62,16 +62,13 @@
       </section>
 
       <!-- About Section Start -->
-      <section class="about-section">
+      <section class="about-section" id="about">
         <div class="section-content">
           <div class="about-image">
             <img src="img/about.jpg" alt="About" class="about-img" />
           </div>
           <div class="about-image">
-            <h2 class="section-title">About
-               <span>Spot</span>
-            <span class="textcafe">Cafe.</span>
-            </h2>
+            <h2 class="section-title">About <span>Spot</span><span>Cafe.</span></h2>
             <p class="text">
               SpotCafe adalah tempat kamu cari referensi nongkrong paling kece,
               dari coffee shop hits, resto cozy, dan instagramable. Mau cari
@@ -85,8 +82,132 @@
           </div>
         </div>
       </section>
+      <!-- About Section End -->
+
+      <!-- Category Section Start -->
+      <section class="category-section" id="category">
+        <h2 class="section-title">Category</h2>
+        <div class="category-list">
+          <a href="coffee-shop.html" class="category-card-link">
+            <div class="category-card">
+              <i class="fas fa-mug-hot"></i>
+              <h3>Coffee Shop</h3>
+              <p>Tempat ngopi kekinian, cocok buat santai atau kerja.</p>
+            </div>
+          </a>
+          <a href="work-from-cafe.html" class="category-card-link">
+            <div class="category-card">
+              <i class="fas fa-laptop"></i>
+              <h3>Work From Cafe</h3>
+              <p>Cafe dengan fasilitas nyaman untuk kerja atau nugas.</p>
+            </div>
+          </a>
+          <a href="aesthetic.html" class="category-card-link">
+            <div class="category-card">
+              <i class="fas fa-camera-retro"></i>
+              <h3>Aesthetic</h3>
+              <p>Cafe dengan spot foto instagramable dan desain unik.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <!-- Category Section End -->
+
+      <!-- Review Section Start -->
+      <section class="review-section" id="review">
+        <h2 class="section-title">Review</h2>
+        
+        <!-- Review Form Start -->
+        <form class="review-form" id="review-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Nama Anda" required>
+          </div>
+          <div class="form-group">
+            <select name="cafe" required>
+              <option value="">Pilih Cafe</option>
+              <option value="Kopi Kenangan Palu">Kopi Kenangan Palu</option>
+              <option value="Coffee Story">Coffee Story</option>
+              <option value="Palu Brew House">Palu Brew House</option>
+              <option value="Kedai Kopi Nusantara">Kedai Kopi Nusantara</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="rating" required>
+              <option value="">Rating</option>
+              <option value="5">★★★★★</option>
+              <option value="4">★★★★☆</option>
+              <option value="3">★★★☆☆</option>
+              <option value="2">★★☆☆☆</option>
+              <option value="1">★☆☆☆☆</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea name="review" rows="3" placeholder="Tulis review Anda..." required></textarea>
+          </div>
+          <button type="submit" class="review-submit">Kirim Review</button>
+        </form>
+        <!-- Review Form End -->
+
+        <div class="review-list">
+          <div class="review-card">
+            <div class="review-header">
+              <span class="reviewer-avatar"><i class="fas fa-user-circle"></i></span>
+              <span class="reviewer-name">Andi</span>
+              <span class="review-rating">
+                ★★★★☆
+              </span>
+            </div>
+            <div class="review-cafe">Kopi Kenangan Palu</div>
+            <div class="review-date">31 Mei 2025</div>
+            <p class="review-text">
+              Tempatnya nyaman banget buat nugas, kopinya juga enak!
+            </p>
+          </div>
+          <!-- Tambahkan review-card lain sesuai kebutuhan -->
+        </div>
+      </section>
+      <!-- Review Section End -->
     </main>
 
     <script src="js/script.js"></script>
+    <script>
+      document.querySelectorAll('.coffee-toggle').forEach(btn => {
+        btn.addEventListener('click', function() {
+          this.parentElement.classList.toggle('active');
+        });
+      });
+    </script>
+    <script>
+document.getElementById('review-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  // Ambil data dari form
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    cafe: form.cafe.value,
+    rating: form.rating.value,
+    review: form.review.value
+  };
+
+  // Kirim ke backend (ganti URL sesuai backend-mu)
+  try {
+    const response = await fetch('/api/review', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      alert('Review berhasil dikirim!');
+      form.reset();
+    } else {
+      alert('Gagal mengirim review. Coba lagi.');
+    }
+  } catch (err) {
+    alert('Terjadi kesalahan koneksi.');
+  }
+});
+</script>
   </body>
 </html>
