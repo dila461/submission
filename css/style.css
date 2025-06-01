@@ -18,7 +18,7 @@ a {
 
 /* Navbar */
 header {
-  background: rgba(56, 27, 0, 1);
+  background: rgb(158, 114, 74);
   position: fixed;
   top: 0;
   left: 0;
@@ -78,6 +78,7 @@ header .navbar {
   background-size: cover;
   background-position: center;
 }
+
 .hero .content {
   padding: 1.4rem 7%;
   max-width: 60rem;
@@ -131,6 +132,13 @@ header .navbar {
   border-radius: 999px;
 }
 
+.hero::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(0deg,rgba(1,1,3) 3%, rgba(255,255,255,0) 25%);
+}
 
 /* Responsive Media Query */
 @media screen and (max-width: 900px) {
