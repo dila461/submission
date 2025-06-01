@@ -17,7 +17,7 @@ a {
 
 /* Navbar */
 header {
-  background: rgb(141, 95, 53);
+  background: rgb(75, 40, 7);
   position: fixed;
   top: 0;
   left: 0;
@@ -71,7 +71,7 @@ header .navbar {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/header2.jpg");
+  background-image: url("../img/header4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -84,7 +84,7 @@ header .navbar {
 
 .hero .content h1 {
   font-size: 5em;
-  color: #352702;
+  color: #d3d0c7;
   text-shadow: 2px 2px 5px rgba(2, 2, 5, 0.1);
   line-height: 1.2;
 }
@@ -98,7 +98,7 @@ header .navbar {
 
 .hero .content h2 {
   font-size: 2em;
-  color: #411102;
+  color: #f3e9e6;
   text-shadow: 2px 2px 5px rgba(2, 2, 5, 0.1);
   line-height: 1.7;
 }
