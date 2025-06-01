@@ -34,10 +34,11 @@
   transition: box-shadow 0.2s, transform 0.2s;
   position: relative;
   overflow: hidden;
+  border: 1.5px solid #f3e3c8;
 }
 
 .review-card:hover {
-  box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+  box-shadow: 0 16px 40px rgba(184, 125, 74, 0.18);
   transform: translateY(-6px) scale(1.03);
 }
 
@@ -69,6 +70,17 @@
   font-size: 1.25rem;
   letter-spacing: 2px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.review-rating::before {
+  content: "★";
+  color: #ffb300;
+  font-size: 1.2em;
+  margin-right: 2px;
+  display: none;
 }
 
 .review-cafe {
@@ -105,16 +117,18 @@
   font-family: serif;
 }
 
+/* Form Review */
 .review-form {
   max-width: 420px;
   margin: 0 auto 36px auto;
   background: #f9f9f9;
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 24px 20px 18px 20px;
+  box-shadow: 0 2px 12px rgba(185, 140, 90, 0.10);
+  padding: 28px 24px 22px 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
+  border: 1.5px solid #e7d7c3;
 }
 
 .review-form .form-group {
@@ -123,38 +137,42 @@
   gap: 6px;
 }
 
-.review-form input,
-.review-form select,
-.review-form textarea {
-  padding: 10px 12px;
+.review-form .form-group input,
+.review-form .form-group select,
+.review-form .form-group textarea {
+  padding: 12px 14px;
   border-radius: 8px;
-  border: 1px solid #e0d6c3;
+  border: 1.5px solid #e0d6c3;
   font-size: 1rem;
-  font-family: inherit;
   background: #fff;
-  resize: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(185, 140, 90, 0.04);
 }
 
-.review-form input:focus,
-.review-form select:focus,
-.review-form textarea:focus {
+.review-form .form-group input:focus,
+.review-form .form-group select:focus,
+.review-form .form-group textarea:focus {
   outline: none;
   border-color: #b87d4a;
+  box-shadow: 0 2px 8px rgba(185, 140, 90, 0.13);
   background: #f5eee7;
 }
 
 .review-submit {
-  background: #b87d4a;
+  background: linear-gradient(90deg, #b87d4a 60%, #e7c9a9 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 12px 0;
+  padding: 13px 0;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(185, 140, 90, 0.10);
+  letter-spacing: 1px;
 }
 
 .review-submit:hover {
-  background: #8a5a2e;
+  background: linear-gradient(90deg, #a86c2c 60%, #d6b48a 100%);
+  box-shadow: 0 4px 16px rgba(185, 140, 90, 0.18);
 }
