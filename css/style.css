@@ -140,88 +140,6 @@ header .navbar {
   background: linear-gradient(0deg,rgba(1,1,3) 3%, rgba(255,255,255,0) 25%);
 }
 
-/* Responsive Media Query */
-@media screen and (max-width: 900px) {
-
-body.show-mobile-menu header::before {
-  content: '';
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  backdrop-filter: blur(5px);
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.navbar #menu-close-button, 
-.navbar #menu-open-button {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 2rem;
-}
-
-.navbar #menu-close-button {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-}
-
-
-.navbar #menu-open-button {
-    color: rgb(255, 255, 255);
-}
-
-  .navbar .nav-menu {
-    display: block;
-    position: fixed;
-    left: -300px;
-    top: 0;
-    width:  300px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 200px;
-    background: rgb(255, 255, 255);
-    transition: left 0.4s ease;
-  }
-
-  body.show-mobile-menu .navbar .nav-menu {
-    left: 0;
-  }
-
-.navbar .nav-menu .nav-link {
-    color: black;
-    display: block;
-    margin-top: 15px;
-    font-size: 1.5em;
-}
-}
-
-/* Laptop */
-@media (max-width: 1366px) {
-    html {
-        font-size: 75%;
-    }
-}
-
-/* Tablet */
-@media (max-width: 758px) {
-    html {
-        font-size: 62.5%;
-    }
-}
-
-/* Handphone */
-@media (max-width: 450px) {
-    html {
-        font-size: 55%;
-    }
-}
-
 /* Reset & Base */
 * {
   margin: 0;
@@ -270,7 +188,6 @@ header .navbar {
 
 .navbar .nav-logo .logo-text span {
   color: #dda787d7;
-
 }
 
 .navbar .nav-menu {
@@ -333,14 +250,22 @@ header .navbar {
   line-height: 1.7;
 }
 
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(0deg,rgba(1,1,3) 3%, rgba(255,255,255,0) 25%);
+}
+
 /* About Section */
 .about-section {
   min-height: 100vh;
-  padding: 80px 0 40px 0;    /* padding atas 80px, bawah 40px */
+  padding: 80px 0 40px 0;
   background: #C9B194;
   margin-top: 0px;
-  padding-left : 60px;
-  padding-right : 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .about-section .section-content {
@@ -366,7 +291,7 @@ header .navbar {
   max-width: 700px;
 }
 
-.about-section .about-image .about-img{
+.about-section .about-image .about-img {
   width: 220px;
   height: 220px;
   object-fit: cover;
@@ -376,7 +301,7 @@ header .navbar {
 
 /* Category Section */
 .category-section {
-  padding: 80px 0 40px 0;    /* padding atas 80px, bawah 40px */
+  padding: 0;
   background: #f9f9f9;
   text-align: center;
   padding-left: 7%;
@@ -538,7 +463,7 @@ header .navbar {
 
 /* Review Section */
 .review-section {
-  padding: 80px 0 40px 0;    /* padding atas 80px, bawah 40px */
+  padding: 80px 0 40px 0;
   background: #fff;
   text-align: center;
   padding-left: 7%;
@@ -699,17 +624,64 @@ header .navbar {
   background: #8a5a2e;
 }
 
-@media (max-width: 1100px) {
-  .category-list {
-    gap: 18px;
+/* Responsive Media Query */
+@media screen and (max-width: 900px) {
+  body.show-mobile-menu header::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
   }
-  .category-card {
-    width: 260px;
-    padding: 32px 16px 24px 16px;
-  }
-}
 
-@media (max-width: 900px) {
+  .navbar #menu-close-button, 
+  .navbar #menu-open-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .navbar #menu-close-button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .navbar #menu-open-button {
+    color: rgb(255, 255, 255);
+  }
+
+  .navbar .nav-menu {
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width:  300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 200px;
+    background: rgb(255, 255, 255);
+    transition: left 0.4s ease;
+  }
+
+  body.show-mobile-menu .navbar .nav-menu {
+    left: 0;
+  }
+
+  .navbar .nav-menu .nav-link {
+    color: black;
+    display: block;
+    margin-top: 15px;
+    font-size: 1.5em;
+  }
+
   .category-list {
     flex-direction: column;
     align-items: center;
@@ -733,6 +705,16 @@ header .navbar {
   .review-card {
     width: 95vw;
     max-width: 350px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .category-list {
+    gap: 18px;
+  }
+  .category-card {
+    width: 260px;
+    padding: 32px 16px 24px 16px;
   }
 }
 
