@@ -14,15 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/category.css" />
-    <link rel="stylesheet" href="css/coffee.css" />
-    <link rel="stylesheet" href="css/review.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/base.css" />
   </head>
   <body>
     <!-- Header / Navbar Start-->
@@ -53,8 +46,8 @@
 
     <!-- Hero Section Start-->
     <main>
-      <section class="hero" id="home">
-        <div class="content">
+      <section class="hero-section" id="home">
+        <div class="section-content">
           <h1>Yuk Nongkrong Bareng!</h1>
           <p>
             Lagi nyari spot cozy buat ngopi santai, kerja nugas, atau nongkrong
@@ -62,10 +55,10 @@
             semua suasana. Gak usah ribet stalking medsos, cukup scroll dan
             temukan tempat yang bakal jadi favorit baru kamu.
           </p>
-          <h2>
-            Karena nongkrong bukan hanya soal tempat, tapi juga soal rasa dan
-            suasana.
-          </h2>
+        </div>
+
+        <div class="hero-image">
+          <img src="img/spotcafe1.png" alt="SpotCafe Logo" class="hero-img" />
         </div>
       </section>
 
@@ -95,11 +88,11 @@
       <!-- Review Section Start -->
       <section class="review-section" id="review">
         <h2 class="section-title">Review</h2>
-        
+
         <!-- Review Form Start -->
         <form class="review-form" id="review-form">
           <div class="form-group">
-            <input type="text" name="name" placeholder="Nama Anda" required>
+            <input type="text" name="name" placeholder="Nama Anda" required />
           </div>
           <div class="form-group">
             <select name="cafe" required>
@@ -121,7 +114,12 @@
             </select>
           </div>
           <div class="form-group">
-            <textarea name="review" rows="3" placeholder="Tulis review Anda..." required></textarea>
+            <textarea
+              name="review"
+              rows="3"
+              placeholder="Tulis review Anda..."
+              required
+            ></textarea>
           </div>
           <button type="submit" class="review-submit">Kirim Review</button>
         </form>
@@ -130,11 +128,11 @@
         <div class="review-list">
           <div class="review-card">
             <div class="review-header">
-              <span class="reviewer-avatar"><i class="fas fa-user-circle"></i></span>
+              <span class="reviewer-avatar"
+                ><i class="fas fa-user-circle"></i
+              ></span>
               <span class="reviewer-name">Andi</span>
-              <span class="review-rating">
-                ★★★★☆
-              </span>
+              <span class="review-rating"> ★★★★☆ </span>
             </div>
             <div class="review-cafe">Kopi Kenangan Palu</div>
             <div class="review-date">31 Mei 2025</div>
