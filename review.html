@@ -1,107 +1,65 @@
+<!-- filepath: e:\submission\review.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Review - SpotCafe</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Header / Navbar Start-->
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="nav-logo">
-          <h2 class="logo-text">Spot<span>Cafe.</span></h2>
-        </a>
-        <button id="menu-open-button" class="fas fa-bars"></button>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="index.html#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="category.html" class="nav-link">Category</a>
-          </li>
-          <li class="nav-item">
-            <a href="review.html" class="nav-link">Review</a>
-          </li>
-        </ul>
-        <button id="menu-close-button" class="fas fa-times"></button>
-      </nav>
-    </header>
-    <!-- Header / Navbar End-->
-
-    <main>
-      <!-- Review Section Start -->
-      <section class="review-section" id="review">
-        <h2 class="section-title">Review</h2>
-        
-        <!-- Review Form Start -->
-        <form class="review-form" id="review-form">
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Nama Anda" required>
-          </div>
-          <div class="form-group">
-            <select name="cafe" required>
-              <option value="">Pilih Cafe</option>
-              <option value="Kopi Kenangan Palu">Kopi Kenangan Palu</option>
-              <option value="Coffee Story">Coffee Story</option>
-              <option value="Palu Brew House">Palu Brew House</option>
-              <option value="Kedai Kopi Nusantara">Kedai Kopi Nusantara</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <select name="rating" required>
-              <option value="">Rating</option>
-              <option value="5">★★★★★</option>
-              <option value="4">★★★★☆</option>
-              <option value="3">★★★☆☆</option>
-              <option value="2">★★☆☆☆</option>
-              <option value="1">★☆☆☆☆</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <textarea name="review" rows="3" placeholder="Tulis review Anda..." required></textarea>
-          </div>
-          <button type="submit" class="review-submit">Kirim Review</button>
-        </form>
-        <!-- Review Form End -->
-      </section>
-      <!-- Review Section End -->
-    </main>
-
-    <script src="js/script.js"></script>
-    <script>
-      document.getElementById('review-form').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const form = e.target;
-        const data = {
-          name: form.name.value,
-          cafe: form.cafe.value,
-          rating: form.rating.value,
-          review: form.review.value
-        };
-        try {
-          const response = await fetch('/api/review', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
-          if (response.ok) {
-            alert('Review berhasil dikirim!');
-            form.reset();
-          } else {
-            alert('Gagal mengirim review. Coba lagi.');
-          }
-        } catch (err) {
-          alert('Terjadi kesalahan koneksi.');
-        }
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review - SpotCafe</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <h2 class="logo-text">Spot<span>Cafe.</span></h2>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="category.html" class="nav-link">Category</a></li>
+        <li class="nav-item"><a href="review.html" class="nav-link active">Review</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="review-section">
+      <h2 class="section-title">Tulis Review Kamu</h2>
+      <form class="review-form">
+        <div class="form-group">
+          <label for="name">Nama</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="cafe">Nama Cafe</label>
+          <input type="text" id="cafe" name="cafe" required />
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating</label>
+          <select id="rating" name="rating" required>
+            <option value="">Pilih rating</option>
+            <option value="5">5 - Luar Biasa</option>
+            <option value="4">4 - Bagus</option>
+            <option value="3">3 - Cukup</option>
+            <option value="2">2 - Kurang</option>
+            <option value="1">1 - Buruk</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="review">Review</label>
+          <textarea id="review" name="review" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="review-submit">Kirim Review</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 SpotCafe. All rights reserved.</p>
+      <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
+    </div>
+  </footer>
+</body>
 </html>

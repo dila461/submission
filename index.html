@@ -35,6 +35,9 @@
           <li class="nav-item">
             <a href="category.html" class="nav-link">Category</a>
           </li>
+          <li class="nav-item">
+            <a href="review.html" class="nav-link">Review</a>
+          </li>
         </ul>
         <button id="menu-open-button" class="fas fa-bars"></button>
       </nav>
@@ -81,11 +84,15 @@
         </div>
       </section>
       <!-- About Section End -->
-
-      <!-- Review Section Start -->
-      <section class="review-section" id="review">
-        <h2 class="section-title">Review</h2>
     </main>
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 SpotCafe. All rights reserved.</p>
+        <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
     <script src="js/script.js"></script>
     <script>
       document.querySelectorAll(".coffee-toggle").forEach((btn) => {
@@ -93,40 +100,6 @@
           this.parentElement.classList.toggle("active");
         });
       });
-    </script>
-    <script>
-      document
-        .getElementById("review-form")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-
-          // Ambil data dari form
-          const form = e.target;
-          const data = {
-            name: form.name.value,
-            cafe: form.cafe.value,
-            rating: form.rating.value,
-            review: form.review.value,
-          };
-
-          // Kirim ke backend (ganti URL sesuai backend-mu)
-          try {
-            const response = await fetch("/api/review", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(data),
-            });
-
-            if (response.ok) {
-              alert("Review berhasil dikirim!");
-              form.reset();
-            } else {
-              alert("Gagal mengirim review. Coba lagi.");
-            }
-          } catch (err) {
-            alert("Terjadi kesalahan koneksi.");
-          }
-        });
     </script>
   </body>
 </html>
