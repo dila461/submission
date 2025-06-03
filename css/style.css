@@ -647,7 +647,7 @@ header .navbar {
   html {
     font-size: 55%;
   }
-  .category-card {
-    padding: 24px 8px 18px 8px;
+  .navbar .nav-logo .logo-text {
+    font-size: 1.2rem;
   }
 }
