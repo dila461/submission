@@ -39,7 +39,7 @@
             <a href="review.html" class="nav-link">Review</a>
           </li>
         </ul>
-        <button id="menu-open-button" class="fas fa-bars"></button>
+        <button id="hamburger-btn" class="fas fa-bars hamburger-btn"></button>
       </nav>
     </header>
     <!-- Header / Navbar End-->
@@ -93,6 +93,16 @@
       </div>
     </footer>
     <!-- Footer End -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <nav id="sidebar" class="sidebar">
+      <button id="sidebar-close" class="sidebar-close"><i class="fas fa-times"></i></button>
+      <ul class="sidebar-menu">
+        <li><a href="#home" class="sidebar-link">Home</a></li>
+        <li><a href="#about" class="sidebar-link">About</a></li>
+        <li><a href="category.html" class="sidebar-link">Category</a></li>
+        <li><a href="review.html" class="sidebar-link">Review</a></li>
+      </ul>
+    </nav>
     <script src="js/script.js"></script>
     <script>
       document.querySelectorAll(".coffee-toggle").forEach((btn) => {
