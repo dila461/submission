@@ -6,14 +6,8 @@
     <title>Category - SpotCafe</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/base.css">
-     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
   </head>
   <body>
     <header>
@@ -22,34 +16,14 @@
           <h2 class="logo-text">Spot<span>Cafe.</span></h2>
         </a>
         <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="index.html#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="category.html" class="nav-link">Category</a>
-          </li>
-          <li class="nav-item">
-            <a href="review.html" class="nav-link">Review</a>
-          </li>
+          <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="category.html" class="nav-link active">Category</a></li>
+          <li class="nav-item"><a href="review.html" class="nav-link">Review</a></li>
         </ul>
-        <button id="hamburger-btn" class="fas fa-bars hamburger-btn"></button>
       </nav>
     </header>
-    <div id="sidebar-overlay" class="sidebar-overlay"></div>
-    <nav id="sidebar" class="sidebar">
-      <button id="sidebar-close" class="sidebar-close"><i class="fas fa-times"></i></button>
-      <ul class="sidebar-menu">
-        <li><a href="#home" class="sidebar-link">Home</a></li>
-        <li><a href="#about" class="sidebar-link">About</a></li>
-        <li><a href="category.html" class="sidebar-link">Category</a></li>
-        <li><a href="review.html" class="sidebar-link">Review</a></li>
-      </ul>
-    </nav>
     <main>
-      <!-- Category Section Start -->
       <section class="category-section" id="category">
         <h2 class="section-title">Category</h2>
         <div class="category-list">
@@ -76,14 +50,12 @@
           </a>
         </div>
       </section>
-      <!-- Category Section End -->
     </main>
-   <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 SpotCafe. All rights reserved.</p>
-      <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
-    </div>
-   </footer>
-   <script src="js/script.js"></script>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 SpotCafe. All rights reserved.</p>
+        <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -7,14 +7,8 @@
   <title>Review - SpotCafe</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/base.css" />
-   <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
   <header>
@@ -24,51 +18,51 @@
       </a>
       <ul class="nav-menu">
         <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="category.html" class="nav-link">Category</a></li>
         <li class="nav-item"><a href="review.html" class="nav-link active">Review</a></li>
       </ul>
-      <button id="hamburger-btn" class="fas fa-bars hamburger-btn"></button>
     </nav>
   </header>
-  <div id="sidebar-overlay" class="sidebar-overlay"></div>
-  <nav id="sidebar" class="sidebar">
-    <button id="sidebar-close" class="sidebar-close"><i class="fas fa-times"></i></button>
-    <ul class="sidebar-menu">
-      <li><a href="#home" class="sidebar-link">Home</a></li>
-      <li><a href="#about" class="sidebar-link">About</a></li>
-      <li><a href="category.html" class="sidebar-link">Category</a></li>
-      <li><a href="review.html" class="sidebar-link">Review</a></li>
-    </ul>
-  </nav>
   <main>
     <section class="review-section">
-      <h2 class="section-title">Tulis Review Kamu</h2>
+      <div class="review-header">
+        <i class="fas fa-star"></i>
+        <h2 class="section-title">Tulis Review Cafe Favoritmu</h2>
+        <p class="review-desc">
+          Bagikan pengalamanmu di cafe Palu! Review kamu membantu orang lain menemukan spot terbaik.
+        </p>
+      </div>
       <form class="review-form">
-        <div class="form-group">
-          <label for="name">Nama</label>
-          <input type="text" id="name" name="name" required />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama kamu" required />
+          </div>
+          <div class="form-group">
+            <label for="cafe">Nama Cafe</label>
+            <input type="text" id="cafe" name="cafe" placeholder="Nama cafe" required />
+          </div>
         </div>
-        <div class="form-group">
-          <label for="cafe">Nama Cafe</label>
-          <input type="text" id="cafe" name="cafe" required />
-        </div>
-        <div class="form-group">
-          <label for="rating">Rating</label>
-          <select id="rating" name="rating" required>
-            <option value="">Pilih rating</option>
-            <option value="5">5 - Luar Biasa</option>
-            <option value="4">4 - Bagus</option>
-            <option value="3">3 - Cukup</option>
-            <option value="2">2 - Kurang</option>
-            <option value="1">1 - Buruk</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rating">Rating</label>
+            <div class="rating-stars">
+              <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars"></label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="review">Review</label>
-          <textarea id="review" name="review" rows="4" required></textarea>
+          <textarea id="review" name="review" rows="4" placeholder="Tulis pengalamanmu di sini..." required></textarea>
         </div>
-        <button type="submit" class="review-submit">Kirim Review</button>
+        <button type="submit" class="review-submit">
+          <i class="fas fa-paper-plane"></i> Kirim Review
+        </button>
       </form>
     </section>
   </main>
@@ -78,6 +72,5 @@
       <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
     </div>
   </footer>
-  <script src="js/script.js"></script>
 </body>
 </html>
