@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   border: none;
   text-decoration: none;
 }
@@ -188,12 +187,28 @@ header .navbar {
   font-weight: 400;
 }
 
-/* DOOSOO COFFEE */
+/* COFFEE */
 
-h1 {
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: transparent;
+  color: #000000;
   text-align: center;
-  margin-bottom: 40px;
+  padding: 24px 0;
 }
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 section.coffee-item {
   background: white;
   border-radius: 12px;
@@ -201,24 +216,13 @@ section.coffee-item {
   margin-bottom: 40px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-section.coffee-item img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 12px;
+
+section.coffee-item h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
 }
-.gambar-doosoo {
-  display: flex;
-  gap: 10px; /* jarak antar gambar */
-  padding: 20px;
-}
-section.coffee-item p.description {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 15px;
-}
-section.coffee-item a.instagram-link {
+
+.instagram-link {
   color: #e4405f;
   font-weight: 600;
   text-decoration: none;
@@ -227,98 +231,32 @@ section.coffee-item a.instagram-link {
   gap: 6px;
   margin-bottom: 15px;
 }
-section.coffee-item a.instagram-link:hover {
+
+.instagram-link:hover {
   text-decoration: underline;
 }
-iframe {
-  border: 0;
-  border-radius: 8px;
-  width: 100%;
-  height: 250px;
-}
-/* GIS */
-section.coffee-item {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-section.coffee-item img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  display: block;
+
+.gambar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 12px;
 }
-.gambar-gis {
-  display: flex;
-  gap: 10px; /* jarak antar gambar */
-  padding: 20px;
+
+.gambar img {
+  width: 30%;
+  border-radius: 8px;
 }
-section.coffee-item p.description {
+
+.deskripsi {
   font-size: 16px;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
-section.coffee-item a.instagram-link {
-  color: #e4405f;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 15px;
-}
-section.coffee-item a.instagram-link:hover {
-  text-decoration: underline;
-}
+
 iframe {
-  border: 0;
-  border-radius: 8px;
+  border-radius: 10px;
   width: 100%;
-  height: 250px;
-}
-/* GIS */
-section.coffee-item {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-section.coffee-item img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 12px;
-}
-.gambar-ribelv {
-  display: flex;
-  gap: 10px; /* jarak antar gambar */
-  padding: 20px;
-}
-section.coffee-item p.description {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 15px;
-}
-section.coffee-item a.instagram-link {
-  color: #e4405f;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 15px;
-}
-section.coffee-item a.instagram-link:hover {
-  text-decoration: underline;
-}
-iframe {
-  border: 0;
-  border-radius: 8px;
-  width: 100%;
-  height: 250px;
+  height: 300px;
 }

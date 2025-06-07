@@ -4,36 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>spotcafe</title>
-    <!-- Link Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/base.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <!-- Link Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/base.css" />
   </head>
   <body>
     <!-- Header / Navbar Start-->
-          <header>
+    <header>
       <nav class="navbar">
-        <a href="#" class="nav-logo">Spot<span>Cafe.</span></a>
-
-        <div class="nav-menu">
-            <a href="index.html#home" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About us</a>
+        <a href="#" class="nav-logo">
+          <h2 class="logo-text">Spot<span>Cafe.</span></h2>
+        </a>
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about-us.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
             <a href="category.html" class="nav-link">Category</a>
-            <a href="index.html#review" class="nav-link">Review</a>
-
+          </li>
+          <li class="nav-item">
+            <a href="review.html" class="nav-link">Review</a>
+          </li>
+        </ul>
         <button id="menu-open-button" class="fas fa-bars"></button>
-        <button id="menu-close-button" class="fas fa-times"></button>
-        </div>
       </nav>
-      </header>
+    </header>
     <!-- Header / Navbar End-->
 
     <!-- Hero Section Start-->
@@ -48,7 +54,6 @@
             temukan tempat yang bakal jadi favorit baru kamu.
           </p>
         </div>
-
         <div class="hero-image">
           <img src="img/spotcafe1.png" alt="SpotCafe Logo" class="hero-img" />
         </div>
@@ -114,48 +119,11 @@
       </section>
       <!-- Review Section End -->
     </main>
-
-    <script src="js/script.js"></script>
-    <script>
-      document.querySelectorAll(".coffee-toggle").forEach((btn) => {
-        btn.addEventListener("click", function () {
-          this.parentElement.classList.toggle("active");
-        });
-      });
-    </script>
-    <script>
-      document
-        .getElementById("review-form")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-
-          // Ambil data dari form
-          const form = e.target;
-          const data = {
-            name: form.name.value,
-            cafe: form.cafe.value,
-            rating: form.rating.value,
-            review: form.review.value,
-          };
-
-          // Kirim ke backend (ganti URL sesuai backend-mu)
-          try {
-            const response = await fetch("/api/review", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(data),
-            });
-
-            if (response.ok) {
-              alert("Review berhasil dikirim!");
-              form.reset();
-            } else {
-              alert("Gagal mengirim review. Coba lagi.");
-            }
-          } catch (err) {
-            alert("Terjadi kesalahan koneksi.");
-          }
-        });
-    </script>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 SpotCafe. All rights reserved.</p>
+        <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
+      </div>
+    </footer>
   </body>
 </html>
