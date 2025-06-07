@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background: #331f00;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 30px;
+  transition: padding 0.3s ease;
+}
+
+header .navbar {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+  color: rgb(255, 255, 255);
+  font-size: 2.3rem;
+  font-style: italic;
+  font-weight: 900;
+  margin-left: 70px;
+}
+
+.navbar .nav-logo .logo-text span {
+  color: #cc682ed7;
+}
+
+.navbar .nav-menu {
+  display: flex;
+  gap: 40px;
+  margin-right: 100px;
+}
+
+.navbar .nav-menu .nav-link {
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 999px;
+  transition: 0.5s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+  color:  rgba(46, 3, 3, 0.651);
+  background: rgb(245, 209, 162);
+}
+
+.navbar #menu-close-button,
+.navbar #menu-open-button {
+  display: none;
+}
+
+/* Responsive Media Query */
+@media screen and (max-width: 900px) {
+  body.show-mobile-menu header::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar #menu-close-button,
+  .navbar #menu-open-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .navbar #menu-close-button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .navbar #menu-open-button {
+    color: rgb(255, 255, 255);
+  }
+
+  .navbar .nav-menu {
+    display: none;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 200px;
+    background: rgb(255, 255, 255);
+    transition: left 0.4s ease;
+  }
+
+  body.show-mobile-menu .navbar .nav-menu {
+    display: flex;
+  }
+
+  .navbar .nav-menu .nav-link {
+    color: black;
+    display: block;
+    margin-top: 15px;
+    font-size: 1.5em;
+  }
+}
+
+/* Category Section */
+.category-section {
+  padding: 80px 0 40px 0; /* padding atas 80px, bawah 40px */
+  background: #f9f9f9;
+  text-align: center;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.category-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+  color: #222;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.category-card-link {
+  text-decoration: none;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+  padding: 40px 32px 32px 32px;
+  width: 300px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.category-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.13);
+}
+
+.category-card i {
+  font-size: 3rem;
+  color: #b87d4a;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  color: #222;
+  font-weight: 700;
+}
+
+.category-card p {
+  font-size: 1.05rem;
+  color: #666;
+  font-weight: 400;
+}
+
+/* DOOSOO COFFEE */
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+section.coffee-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+section.coffee-item img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+.gambar-doosoo {
+  display: flex;
+  gap: 10px; /* jarak antar gambar */
+  padding: 20px;
+}
+section.coffee-item p.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+section.coffee-item a.instagram-link {
+  color: #e4405f;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+section.coffee-item a.instagram-link:hover {
+  text-decoration: underline;
+}
+iframe {
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 250px;
+}
+/* GIS */
+section.coffee-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+section.coffee-item img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+.gambar-gis {
+  display: flex;
+  gap: 10px; /* jarak antar gambar */
+  padding: 20px;
+}
+section.coffee-item p.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+section.coffee-item a.instagram-link {
+  color: #e4405f;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+section.coffee-item a.instagram-link:hover {
+  text-decoration: underline;
+}
+iframe {
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 250px;
+}
+/* GIS */
+section.coffee-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+section.coffee-item img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 12px;
+}
+.gambar-ribelv {
+  display: flex;
+  gap: 10px; /* jarak antar gambar */
+  padding: 20px;
+}
+section.coffee-item p.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+section.coffee-item a.instagram-link {
+  color: #e4405f;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+section.coffee-item a.instagram-link:hover {
+  text-decoration: underline;
+}
+iframe {
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 250px;
+}
