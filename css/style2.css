@@ -197,10 +197,10 @@ body {
 }
 
 header {
-  background-color: transparent;
-  color: #000000;
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  border-bottom: 2px solid #ddd;
   text-align: center;
-  padding: 24px 0;
 }
 
 main {
@@ -241,7 +241,7 @@ section.coffee-item h2 {
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .gambar img {
@@ -252,7 +252,9 @@ section.coffee-item h2 {
 .deskripsi {
   font-size: 16px;
   color: #555;
-  margin-bottom: 16px;
+  line-height: 1.6;        
+  text-align: justify;  
+  margin-bottom: 10px;     
 }
 
 iframe {
@@ -261,4 +263,69 @@ iframe {
   height: 300px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+
+
+  /* KEMBALI KE KATEGORI */
+}
+.kembali {
+  margin-bottom: 20px;
+}
+
+.kembali a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #eaeaea;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.kembali a:hover {
+  background-color: #ccc;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 999px){
+    section.coffee-item h2 {
+    font-size: 20px;
+  }
+
+  .gambar {
+    gap: 12px;
+  }
+
+  .gambar img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .deskripsi {
+    font-size: 15px;
+  }
+
+  iframe {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+    font-size: 22px;
+  }
+
+  section.coffee-item h2 {
+    font-size: 18px;
+  }
+
+  .deskripsi {
+    font-size: 14px;
+  }
+
+  iframe {
+    height: 200px;
+  }
 }

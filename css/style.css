@@ -148,8 +148,8 @@ header .navbar {
 }
 /* About Section */
 .about-section {
-  padding: 110px;
-  background: #fcb243;
+  padding: 130px;
+  background: #fde2d5;
 }
 
 .about-section .section-content {
@@ -175,16 +175,20 @@ header .navbar {
   height: 400px;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: 0px;
+  margin-top: 40px;     /* turunkan gambar */
+  margin-left: -150px;   /* geser lebih ke kiri */
 }
 
 .about-section .about-image-text {
   max-width: 50%;
   line-height: 28px;
-  margin: 50px 0 30px;
-  text-align: center;
+  margin: 0 auto;
   color: #460808;
   font-size: 17px;
+  text-align: justify;
+  line-height: 1.6;         /* jarak antar baris */
+  margin-bottom: 1em;       /* jarak antar paragraf */
+  max-width: 600px;         /* batas lebar paragraf */
 }
 
 /* Responsive Media Query */
