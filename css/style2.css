@@ -99,6 +99,29 @@ iframe {
   background-color: #ccc;
 }
 
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 101;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #FFF2D8;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 999px){
     section.coffee-item h2 {
@@ -139,8 +162,36 @@ iframe {
   iframe {
     height: 200px;
   }
-<<<<<<< HEAD
 }
-=======
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 24px;
+    background: #113946;
+    flex-direction: column;
+    gap: 0;
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(17,57,70,0.10);
+    padding: 16px 0;
+    display: none;
+    z-index: 100;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-item {
+    margin: 0;
+    padding: 0 24px;
+  }
+  .nav-link {
+    display: block;
+    padding: 12px 0;
+    color: #FFF2D8;
+  }
 }
->>>>>>> 26a5baef2c6fbd2bb663500e299afee3ce077d21

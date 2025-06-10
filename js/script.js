@@ -1,4 +1,3 @@
-const menuOpenButton = document.querySelector('#menu-open-button');
 const menuCloseButton = document.querySelector('#menu-close-button');
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const sidebar = document.getElementById('sidebar');
@@ -13,4 +12,5 @@ if (menuOpenButton && menuCloseButton) {
 const menuCloseButton = document.querySelector('#menu-close-button');
 
 menuCloseButton.addEventListener("click", () =>
-menuOpenButton.click());
+menuOpenButton.click())
+};
