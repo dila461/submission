@@ -467,13 +467,86 @@ header {
   color: #BCA37F;
 }
 
-/* RESPONSIVE BREAKPOINTS */
-@media (max-width: 900px) {
-  .navbar {
-    padding: 12px 12px;
+/* Responsive Media Query */
+@media screen and (max-width: 900px) {
+  /* Overlay blur saat menu mobile aktif */
+  body.show-mobile-menu header::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 9;
   }
-  .nav-menu {
-    gap: 16px;
+
+.navbar {
+    padding: 12px 16px;
+  }
+
+  /* Tampilkan tombol hamburger */
+.navbar #menu-close-button, 
+.navbar #menu-open-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+    z-index: 11;
+  }
+
+.navbar #menu-close-button {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    color: #113946;
+  }
+
+  /* Style untuk menu mobile */
+  .navbar .nav-menu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    padding-top: 100px;
+    background: #ffffff;
+    transition: left 0.4s ease;
+    z-index: 10;
+  }
+  
+  body.show-mobile-menu .navbar .nav-menu {
+    left: 0;
+  }
+  
+
+  /* Sembunyikan menu default */
+  .navbar .nav-menu {
+    display: none;
+  }
+
+  .navbar .nav-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background: #ffffff;
+  }
+  .navbar .nav-menu .nav-link{
+    color: black;
+    display: block;
+    margin-top: 17%;
+    font-size: 1rem;
   }
   .hero-section {
     flex-direction: column;
@@ -552,4 +625,3 @@ main {
   flex: 1 0 auto;
   padding-top: 80px; /* agar tidak tertutup navbar */
 }
- 
