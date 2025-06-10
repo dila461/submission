@@ -467,86 +467,74 @@ header {
   color: #BCA37F;
 }
 
-/* Responsive Media Query */
-@media screen and (max-width: 900px) {
-  /* Overlay blur saat menu mobile aktif */
-  body.show-mobile-menu header::before {
-    content: '';
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 9;
-  }
+/* Default menu untuk desktop */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
 
-.navbar {
-    padding: 12px 16px;
-  }
-
-  /* Tampilkan tombol hamburger */
-.navbar #menu-close-button, 
-.navbar #menu-open-button {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 2rem;
-    color: #fff;
-    z-index: 11;
-  }
-
-.navbar #menu-close-button {
-    position: absolute;
-    right: 24px;
-    top: 24px;
-    color: #113946;
-  }
-
-  /* Style untuk menu mobile */
-  .navbar .nav-menu {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    align-items: center;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    padding-top: 100px;
-    background: #ffffff;
-    transition: left 0.4s ease;
-    z-index: 10;
-  }
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
   
-  body.show-mobile-menu .navbar .nav-menu {
-    left: 0;
-  }
-  
+}
 
-  /* Sembunyikan menu default */
-  .navbar .nav-menu {
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive style */
+@media screen and (max-width: 768px) {
+  .nav-menu {
     display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    height: 100vh; /* kase panjang kebawah */
+    justify-content: center; /* ✅ tengah secara vertikal */
+    align-items: center;     /* ✅ tengah secara horizontal */
+    gap: 2rem;               /* jarak antar item menu */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   }
 
-  .navbar .nav-menu{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 300px;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-    background: #ffffff;
+  .nav-link {
+    text-decoration: none;
+    color: #113946;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-radius: 99px;
+    transition: underline 0.2s, background 0.2s;
+    margin-bottom: 1rem;
   }
-  .navbar .nav-menu .nav-link{
-    color: black;
-    display: block;
-    margin-top: 17%;
-    font-size: 1rem;
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 12px 12px;
+  }
+  .nav-menu {
+    gap: 16px;
   }
   .hero-section {
     flex-direction: column;

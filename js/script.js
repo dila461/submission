@@ -1,16 +1,7 @@
-const menuCloseButton = document.querySelector('#menu-close-button');
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const sidebar = document.getElementById('sidebar');
-const sidebarClose = document.getElementById('sidebar-close');
-const sidebarOverlay = document.getElementById('sidebar-overlay');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-if (menuOpenButton && menuCloseButton) {
-  menuOpenButton.addEventListener("click", () => {
-    document.body.classList.toggle("show-mobile-menu");
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle('toggle');
 });
-
-const menuCloseButton = document.querySelector('#menu-close-button');
-
-menuCloseButton.addEventListener("click", () =>
-menuOpenButton.click())
-};
