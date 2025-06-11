@@ -6,35 +6,27 @@
     <title>spotcafe</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/base.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a href="index.html" class="nav-logo">
+        <div class="nav-logo">
           <h2 class="logo-text">Spot<span>Cafe.</span></h2>
-        </a>
-        <button id="menu-close-button" class="fas fa-times"></button>
+        </div>
+        <button class="hamburger" aria-label="Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <div class="nav-overlay"></div>
         <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="category.html" class="nav-link">Category</a>
-          </li>
-          <li class="nav-item">
-            <a href="review.html" class="nav-link">Review</a>
-          </li>
+          <button class="close-menu" aria-label="Tutup Menu">&times;</button>
+          <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="category.html" class="nav-link">Category</a></li>
+          <li class="nav-item"><a href="review.html" class="nav-link">Review</a></li>
         </ul>
       </nav>
     </header>
@@ -60,5 +52,6 @@
         <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Category - SpotCafe</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="nav-logo">
-          <h2 class="logo-text">Spot<span>Cafe.</span></h2>
-        </a>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="category.html" class="nav-link active">Category</a></li>
-          <li class="nav-item"><a href="review.html" class="nav-link">Review</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="category-section" id="category">
-        <h2 class="section-title">Category</h2>
-        <div class="category-list">
-          <a href="coffee-shop.html" class="category-card-link">
-            <div class="category-card">
-              <i class="fas fa-mug-hot"></i>
-              <h3>Coffee Shop</h3>
-              <p>Tempat ngopi kekinian, cocok buat santai atau kerja.</p>
-            </div>
-          </a>
-          <a href="work-from-cafe.html" class="category-card-link">
-            <div class="category-card">
-              <i class="fas fa-laptop"></i>
-              <h3>Work From Cafe</h3>
-              <p>Cafe dengan fasilitas nyaman untuk kerja atau nugas.</p>
-            </div>
-          </a>
-          <a href="ice-cream.html" class="category-card-link">
-            <div class="category-card">
-              <i class="fas fa-ice-cream"></i>
-              <h3>ice Cream</h3>
-              <p>Cafe dengan spot foto instagramable dan desain unik.</p>
-            </div>
-          </a>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <p>&copy; 2025 SpotCafe. All rights reserved.</p>
-        <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category - SpotCafe</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <h2 class="logo-text">Spot<span>Cafe.</span></h2>
       </div>
-    </footer>
-  </body>
+      <button class="hamburger" aria-label="Menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <div class="nav-overlay"></div>
+      <ul class="nav-menu">
+        <button class="close-menu" aria-label="Tutup Menu">&times;</button>
+        <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="category.html" class="nav-link">Category</a></li>
+        <li class="nav-item"><a href="review.html" class="nav-link">Review</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="category-section" id="category">
+      <h2 class="section-title">Category</h2>
+      <div class="category-list">
+        <a href="coffee-shop.html" class="category-card-link">
+          <div class="category-card">
+            <i class="fas fa-mug-hot"></i>
+            <h3>Coffee Shop</h3>
+            <p>Tempat ngopi kekinian, cocok buat santai atau kerja.</p>
+          </div>
+        </a>
+        <a href="work-from-cafe.html" class="category-card-link">
+          <div class="category-card">
+            <i class="fas fa-laptop"></i>
+            <h3>Work From Cafe</h3>
+            <p>Cafe dengan fasilitas nyaman untuk kerja atau nugas.</p>
+          </div>
+        </a>
+        <a href="ice-cream.html" class="category-card-link">
+          <div class="category-card">
+            <i class="fas fa-ice-cream"></i>
+            <h3>Ice Cream</h3>
+            <p>Cafe dengan spot foto instagramable dan desain unik.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 SpotCafe. All rights reserved.</p>
+      <p>Made with <i class="fas fa-coffee"></i> in Palu</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
 </html>
